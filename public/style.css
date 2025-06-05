@@ -1,0 +1,136 @@
+:root{
+    --bg-color:rgb(59, 57, 57);
+}
+body{
+    /* background-color: var(--bg-color); */
+    /* background: var(--bg-color); */
+    /* background: rgb(14,22,31);
+    background: linear-gradient(184deg, rgba(14,22,31,1) 29%, rgba(25,43,53,1) 53%, rgba(80,95,97,1) 88%); */
+    background: rgb(8,31,44);
+    background: linear-gradient(180deg, rgb(7, 26, 37) 25%, rgb(10, 29, 52) 65%, rgb(11, 73, 95)  90%);
+    background-attachment: scroll;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior:auto;
+}
+
+h1{
+    position: relative;
+    font-size: 2rem;
+    
+    /* color:rgb(243, 60, 87); */
+    /*the next 3 lines are for text color.*/
+
+    /* background: linear-gradient(to right, #3532f9, #79caf2);        */
+       
+
+    /* background: rgb(114,9,212); */
+    background: linear-gradient(to right, rgba(114,9,212,1) 0%, rgba(40,50,212,1) 33%, rgba(0,165,178,1) 99%);
+    -webkit-text-fill-color: transparent;       
+    background-clip: text; 
+}
+
+h1::before{
+    content:'';
+    display:block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 1px 8px 2px rgba(106, 190, 255, 0.678);
+
+    /* background-color: rgb(227, 239, 159); */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+    transform-origin: right;
+}
+
+h1:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    
+} 
+
+
+.card{
+    padding: 15px 5px;
+    border-radius: 15px;
+    transition: 0.5s ease;
+    border:5px solid var(--bg-color);
+    /* justify-content: center;
+    align-items: center;
+    align-content: center; */
+}
+
+.card:hover{
+    border-color: #3191cd;
+    transform: scale(1.05);
+    
+}
+
+.card-img-top{
+    width:100%;
+    height: 200px;
+    top:0;
+    left: 0;
+    object-fit: cover;
+}
+
+.card-title{
+    font-weight: normal;
+    transition: 0.3s ease    ;
+    
+}
+.card:hover .card-title{
+    font-weight: bold;
+}
+
+
+.navbar-brand{
+    background: linear-gradient(to right, #3532f9, #8bd0f3);       
+    -webkit-text-fill-color: transparent;       
+    background-clip: text;
+    transition: 0.3s ease ;
+    font-size: 1.4rem; /* Original font size */
+    font-weight: 600;
+}   /*this is for the left heading currentbuzz*/
+
+
+.navbar{
+    transition: all 0.5s ease;
+    padding: 1.3rem 1rem;
+    
+}
+
+.navbar.shrink {
+    padding: 0.7rem 1rem;
+    /* transform: scale(1.1); */
+    box-shadow: 0 1px 8px 2px rgba(106, 190, 255, 0.678);
+    backdrop-filter: blur(10px);
+
+}
+
+/* Smaller navbar-brand font size */
+.navbar.shrink .navbar-brand {
+    font-size: 1.2rem; /* Reduced font size */
+}
+
+.nav-item{
+    font-size: 1.1rem;
+    padding-right: 20px;
+}
+
+.nav-link{
+    transition: 0.35s ease;
+    font-weight: 450;
+    
+}
+.nav-link:hover{
+    background: linear-gradient(to right, #3532f9, #8bd0f3);       
+    -webkit-text-fill-color: transparent;       
+    background-clip: text;
+    font-size: 1.12rem;
+    font-weight: 550;
+}
+
